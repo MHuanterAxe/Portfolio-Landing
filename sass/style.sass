@@ -1,6 +1,6 @@
 // === Variables ===
 // === Colors ===  
-$color-blue: #11749e80 
+$color-blue: #3ca6d3fb
 $color-white: #ffffff44
 
 
@@ -18,8 +18,9 @@ body
     background-color: #000
     margin: 0
     padding: 0
-.container 
+.container
     padding-top: 43px
+    height: 100vh
 .header
     background: center / 100% no-repeat url("/img/header-bg.png") 
     height: 100vh
@@ -28,8 +29,9 @@ body
     display: flex
     justify-content: space-between
     align-items: center
-    padding-left: 8px
-    margin-bottom: 40px
+    height: 100px
+    padding-left: 22px
+    background-color: rgba(0, 0, 0, 0.322)
     & .logo
         width: 50px
         height: 50px
@@ -53,13 +55,17 @@ body
     &-panel
         font-family: Roboto
         font-size: 16px
-        
-    &-pages 
-        margin-bottom: 5px
+        height: 100%
+        align-items: center
+    &-pages
         padding-left: 0
+        margin: 0
+        height: 100%
         & li
             list-style: none
-            padding: 33px 10px 
+            padding: 10px 
+            padding-top: 34px
+            padding-bottom: 29px
             display: inline-flex
             justify-content: space-around
             transition: 0.2s ease
@@ -67,19 +73,23 @@ body
             &:hover
                 border-bottom: 5px solid $color-blue 
             & a 
+                line-height: 32px
                 text-decoration: none
                 color: #ffffff
         
     &-icons 
+        height: 100px
+        padding: 35px 0 
         & ul
             padding: 0
             & li
                 display: inline-block
-                padding: 0  10px 
+                padding: 0 10px 
                 justify-content: space-between
                 list-style: none
-                & a
-                    & img
-                        width: 35px
+                & a img
+                    width: 30px
 .links
     display: none
+
+    

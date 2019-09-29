@@ -21,6 +21,7 @@ body {
 
 .container {
   padding-top: 43px;
+  height: 100vh;
 }
 
 .header {
@@ -38,8 +39,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 8px;
-  margin-bottom: 40px;
+  height: 100px;
+  padding-left: 22px;
+  background-color: rgba(0, 0, 0, 0.322);
 }
 
 .navigation .logo {
@@ -56,7 +58,7 @@ body {
   left: -8px;
   width: 50px;
   height: 50px;
-  background-color: #11749e80;
+  background-color: #3ca6d3fb;
 }
 
 .navigation .logo-rectangle h1 {
@@ -71,16 +73,23 @@ body {
 .navigation-panel {
   font-family: Roboto;
   font-size: 16px;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navigation-pages {
-  margin-bottom: 5px;
   padding-left: 0;
+  margin: 0;
+  height: 100%;
 }
 
 .navigation-pages li {
   list-style: none;
-  padding: 33px 10px;
+  padding: 10px;
+  padding-top: 34px;
+  padding-bottom: 29px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -92,12 +101,18 @@ body {
 }
 
 .navigation-pages li:hover {
-  border-bottom: 5px solid #11749e80;
+  border-bottom: 5px solid #3ca6d3fb;
 }
 
 .navigation-pages li a {
+  line-height: 32px;
   text-decoration: none;
   color: #ffffff;
+}
+
+.navigation-icons {
+  height: 100px;
+  padding: 35px 0;
 }
 
 .navigation-icons ul {
@@ -106,7 +121,7 @@ body {
 
 .navigation-icons ul li {
   display: inline-block;
-  padding: 0  10px;
+  padding: 0 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -114,7 +129,7 @@ body {
 }
 
 .navigation-icons ul li a img {
-  width: 35px;
+  width: 30px;
 }
 
 .links {
