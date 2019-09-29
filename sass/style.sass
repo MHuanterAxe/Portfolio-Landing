@@ -1,0 +1,85 @@
+// === Variables ===
+// === Colors ===  
+$color-blue: #11749e80 
+$color-white: #ffffff44
+
+
+// === Fonts ===
+@font-face 
+    font-family: OpenSans
+    src: url("/fonts/OpenSans-Bold.ttf")
+@font-face 
+    font-family: Roboto
+    src: url("/fonts/Roboto-Regular.ttf")
+// === Main Style ===
+*
+    box-sizing: border-box
+body
+    background-color: #000
+    margin: 0
+    padding: 0
+.container 
+    padding-top: 43px
+.header
+    background: no-repeat url("/img/header-bg.png") 
+    height: 100vh
+
+.navigation
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-left: 8px
+    margin-bottom: 40px
+    & .logo
+        width: 50px
+        height: 50px
+        background-color: $color-white
+        position: relative
+        margin-top: 8px
+        &-rectangle
+            position: absolute
+            top: -8px
+            left: -8px
+            width: 50px
+            height: 50px
+            background-color: $color-blue
+            & h1
+                line-height: 50px
+                margin: 0
+                text-align: center
+                font-family: OpenSans
+                font-size: 20px
+                color: #ffffff
+    &-panel
+        font-family: Roboto
+        font-size: 16px
+        
+    &-pages 
+        margin-bottom: 5px
+        padding-left: 0
+        & li
+            list-style: none
+            padding: 33px 10px 
+            display: inline-flex
+            justify-content: space-around
+            transition: 0.2s ease
+            border-bottom: 5px solid rgba(0,0,0,0)
+            &:hover
+                border-bottom: 5px solid $color-blue 
+            & a 
+                text-decoration: none
+                color: #ffffff
+        
+    &-icons 
+        & ul
+            padding: 0
+            & li
+                display: inline-block
+                padding: 0  10px 
+                justify-content: space-between
+                list-style: none
+                & a
+                    & img
+                        width: 35px
+.links
+    display: none

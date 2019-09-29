@@ -1,0 +1,123 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("/fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-top: 43px;
+}
+
+.header {
+  background: center / 100% no-repeat url("/img/header-bg.png");
+  height: 100vh;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 8px;
+  margin-bottom: 40px;
+}
+
+.navigation .logo {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff44;
+  position: relative;
+  margin-top: 8px;
+}
+
+.navigation .logo-rectangle {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 50px;
+  height: 50px;
+  background-color: #11749e80;
+}
+
+.navigation .logo-rectangle h1 {
+  line-height: 50px;
+  margin: 0;
+  text-align: center;
+  font-family: OpenSans;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.navigation-panel {
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+.navigation-pages {
+  margin-bottom: 5px;
+  padding-left: 0;
+}
+
+.navigation-pages li {
+  list-style: none;
+  padding: 33px 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+}
+
+.navigation-pages li:hover {
+  border-bottom: 5px solid #11749e80;
+}
+
+.navigation-pages li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navigation-icons ul {
+  padding: 0;
+}
+
+.navigation-icons ul li {
+  display: inline-block;
+  padding: 0  10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.navigation-icons ul li a img {
+  width: 35px;
+}
+
+.links {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
