@@ -24,7 +24,7 @@ body {
 }
 
 .header {
-  background: center / 100% no-repeat url("/img/header-bg.png");
+  background: center/100% no-repeat url("/img/header-bg.png");
   height: 100vh;
 }
 
