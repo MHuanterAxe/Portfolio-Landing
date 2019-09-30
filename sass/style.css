@@ -1,11 +1,26 @@
 @font-face {
-  font-family: OpenSans;
+  font-family: OpenSans-Bold;
   src: url("/fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url("/fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
   font-family: Roboto;
   src: url("/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Gotham-Medium;
+  src: url("/fonts/Gotham-medium.otf");
+}
+
+@font-face {
+  font-family: Gotham-Bold;
+  src: url("/fonts/Gotham-Bold.otf");
 }
 
 * {
@@ -20,8 +35,9 @@ body {
 }
 
 .container {
+  max-width: 1170px;
+  padding: 0;
   padding-top: 43px;
-  height: 100vh;
 }
 
 .header {
@@ -33,9 +49,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -47,7 +62,7 @@ body {
 .navigation .logo {
   width: 50px;
   height: 50px;
-  background-color: #ffffff44;
+  background-color: #ffffff;
   position: relative;
   margin-top: 8px;
 }
@@ -65,7 +80,7 @@ body {
   line-height: 50px;
   margin: 0;
   text-align: center;
-  font-family: OpenSans;
+  font-family: OpenSans-Bold;
   font-size: 20px;
   color: #ffffff;
 }
@@ -130,6 +145,85 @@ body {
 
 .navigation-icons ul li a img {
   width: 30px;
+}
+
+.title {
+  max-width: 1170px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.title-main {
+  margin: 0;
+  width: 80%;
+  padding: 38px 26px;
+  text-align: center;
+  font-size: 152px;
+  font-family: Gotham-Bold;
+}
+
+.title-subtitle {
+  margin: 0;
+  padding: 0 26px;
+  width: 80%;
+  font-size: 24px;
+  color: #3ca6d3fb;
+  font-family: Gotham-Medium;
+  letter-spacing: 24px;
+  text-align: center;
+}
+
+.scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 110px;
+  padding-bottom: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scroll-title {
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+  font-family: OpenSans-Regular;
+}
+
+.scroll-btn {
+  margin-top: 23px;
+  width: 65px;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.scroll-btn i {
+  color: #ffffff;
 }
 
 .links {

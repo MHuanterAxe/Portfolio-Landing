@@ -1,16 +1,26 @@
 // === Variables ===
 // === Colors ===  
 $color-blue: #3ca6d3fb
-$color-white: #ffffff44
+$color-white: #ffffff
 
 
 // === Fonts ===
 @font-face 
-    font-family: OpenSans
+    font-family: OpenSans-Bold
     src: url("/fonts/OpenSans-Bold.ttf")
+@font-face 
+    font-family: OpenSans-Regular
+    src: url("/fonts/OpenSans-Regular.ttf")
 @font-face 
     font-family: Roboto
     src: url("/fonts/Roboto-Regular.ttf")
+@font-face 
+    font-family: Gotham-Medium
+    src: url("/fonts/Gotham-medium.otf")
+@font-face 
+    font-family: Gotham-Bold
+    src: url("/fonts/Gotham-Bold.otf")
+
 // === Main Style ===
 *
     box-sizing: border-box
@@ -19,15 +29,16 @@ body
     margin: 0
     padding: 0
 .container
+    max-width: 1170px
+    padding: 0
     padding-top: 43px
-    height: 100vh
 .header
     background: center / 100% no-repeat url("/img/header-bg.png") 
     height: 100vh
 
 .navigation
     display: flex
-    justify-content: space-between
+    justify-content: space-around
     align-items: center
     height: 100px
     padding-left: 22px
@@ -49,7 +60,7 @@ body
                 line-height: 50px
                 margin: 0
                 text-align: center
-                font-family: OpenSans
+                font-family: OpenSans-Bold
                 font-size: 20px
                 color: #ffffff
     &-panel
@@ -89,6 +100,55 @@ body
                 list-style: none
                 & a img
                     width: 30px
+.title
+    max-width: 1170px
+    margin: auto 
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    color: #ffffff
+    text-transform: uppercase
+    
+    &-main
+        margin: 0
+        width: 80%
+        padding: 38px 26px
+        text-align: center
+        font-size: 152px
+        font-family: Gotham-Bold
+    &-subtitle
+        margin: 0
+        padding: 0 26px
+        width: 80%
+        font-size: 24px
+        color: $color-blue
+        font-family: Gotham-Medium
+        letter-spacing: 24px
+        text-align: center
+.scroll
+    display: flex
+    padding-top: 110px
+    padding-bottom: auto
+    flex-direction: column
+    color: $color-white
+    justify-content: center
+    align-items: center
+    &-title
+        font-size: 13px
+        padding: 0
+        margin: 0
+        font-family: OpenSans-Regular
+    &-btn
+        margin-top: 23px
+        width: 65px
+        height: 65px
+        background-color: rgba(0,0,0,0)
+        border: 1px solid $color-white
+        border-radius: 50%
+        & i 
+            color: $color-white
+            
 .links
     display: none
 

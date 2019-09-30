@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./sass/style.css">
+    <script src="https://kit.fontawesome.com/e63551560c.js" crossorigin="anonymous"></script>
     <title>My First Landing</title>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="app">
         <div class="container">
             <nav class="navigation">
                 <div class="logo">
@@ -22,12 +23,7 @@
                 </div>
                 <div class="navigation-panel">
                     <ul class="navigation-pages">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Extentions</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li v-for="p in pages"><a href="{{p.link}}">{{ p.page }}</a></li>
                     </ul>
                 </div>
                 <div class="navigation-icons">
@@ -40,14 +36,24 @@
                     </ul>
                 </div>
             </nav>
+        </div>
+        <div class="title">
+            <h1 class="title-main">Creatives</h1>
+            <h2 class="title-subtitle">Powered by MHuanterAxe</h2>
+        </div>
+        <div class="scroll">
+            <p class="scroll-title">Scroll Down</p>
+            <button class="scroll-btn"><i class="fas fa-chevron-down"></i></button>
+        </div>
     </header>
-    </div>
-    </header>
+
 
     <footer>
         <div class="links">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
             from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>
