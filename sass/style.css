@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: Roboto-BoldCondensed;
+  src: url("/fonts/Roboto-BoldCondensed.ttf");
+}
+
+@font-face {
   font-family: Gotham-Medium;
   src: url("/fonts/Gotham-medium.otf");
 }
@@ -34,6 +39,11 @@ body {
   padding: 0;
 }
 
+section {
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   max-width: 1170px;
   padding: 0;
@@ -41,8 +51,20 @@ body {
 }
 
 .header {
-  background: center/100% no-repeat url("/img/header-bg.png");
   height: 100vh;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: center/100% fixed url("/img/header-bg.png");
+  z-index: -1;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  overflow: hidden;
 }
 
 .navigation {
@@ -73,7 +95,7 @@ body {
   left: -8px;
   width: 50px;
   height: 50px;
-  background-color: #3ca6d3fb;
+  background-color: #11749e;
 }
 
 .navigation .logo-rectangle h1 {
@@ -116,7 +138,7 @@ body {
 }
 
 .navigation-pages li:hover {
-  border-bottom: 5px solid #3ca6d3fb;
+  border-bottom: 5px solid #11749e;
 }
 
 .navigation-pages li a {
@@ -181,7 +203,7 @@ body {
   padding: 0 26px;
   width: 80%;
   font-size: 24px;
-  color: #3ca6d3fb;
+  color: #11749e;
   font-family: Gotham-Medium;
   letter-spacing: 24px;
   text-align: center;
@@ -220,10 +242,82 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #ffffff;
   border-radius: 50%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.scroll-btn:focus {
+  outline: 0;
+}
+
+.scroll-btn:hover {
+  background-color: #ffffff;
+}
+
+.scroll-btn:hover i {
+  color: #000000;
 }
 
 .scroll-btn i {
   color: #ffffff;
+}
+
+.about {
+  min-height: 738px;
+  height: 100vh;
+  background-color: #11749e;
+}
+
+.about-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about-heading__title {
+  padding-top: 172px;
+  padding-bottom: 108px;
+  margin: 0;
+  font-size: 37px;
+  font-family: Gotham-Medium;
+}
+
+.about-heading__symbol {
+  margin: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  font-family: Roboto;
+  font-weight: 900;
+  opacity: 0.3;
+  font-size: 247px;
+}
+
+.about-cards {
+  text-align: center;
+  font-family: Gotham-Medium;
+  color: #ffffff;
+}
+
+.about-cards__card-icon {
+  margin: 0 auto;
+  background-color: #2e85aa;
+  width: 133px;
+  height: 133px;
+  border-radius: 50%;
 }
 
 .links {
