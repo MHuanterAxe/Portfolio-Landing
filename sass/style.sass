@@ -23,17 +23,21 @@ $color-light-blue: #2e85aa
 @font-face 
     font-family: Gotham-Bold
     src: url("/fonts/Gotham-Bold.otf")
+@font-face 
+    font-family: Gotham-Book
+    src: url("/fonts/Gotham-Book.otf")
 
 // === Main Style ===
 *
     box-sizing: border-box
+html 
+  scroll-behavior: smooth;
 body
     background-color: #000
     margin: 0
     padding: 0
-section
-    padding: 0
-    margin: 0
+    overflow-x: hidden
+
 .container
     max-width: 1170px
     padding: 0
@@ -173,8 +177,10 @@ section
             color: $color-white
 .about
     min-height: 738px
-    height: 100vh
+    margin: 0
     background-color: $color-blue  
+    & .container
+        padding: 0
     &-heading
         display: flex
         position: relative
@@ -186,13 +192,13 @@ section
         text-align: center
         &__title
             padding-top: 172px
-            padding-bottom: 108px
+            padding-bottom: 172px
             margin: 0
             font-size: 37px
             font-family: Gotham-Medium
         &__symbol
+            position: absolute
             margin: 0
-            transform: translateY(50%)
             font-family: Roboto
             font-weight: 900
             opacity: 0.3
@@ -203,12 +209,26 @@ section
         color: $color-white
         &__card-icon
             margin: 0 auto
+            display: flex
+            justify-content: center
+            align-items: center
             background-color: $color-light-blue
             width: 133px
             height: 133px
-            overflow: 
+            overflow: hidden
             border-radius: 50%
-
+            position: relative
+            & .icon
+                font-size: 40px
+        &__card-text
+            &__heading
+                font-family: Gotham-Medium
+                text-transform: uppercase
+                font-size: 18px
+                margin: 20px
+            &__p
+                font-family: Gotham-Book
+                font-size: 15px
 .links
     display: none
 

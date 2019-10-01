@@ -28,20 +28,25 @@
   src: url("/fonts/Gotham-Bold.otf");
 }
 
+@font-face {
+  font-family: Gotham-Book;
+  src: url("/fonts/Gotham-Book.otf");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #000;
   margin: 0;
   padding: 0;
-}
-
-section {
-  padding: 0;
-  margin: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -264,8 +269,12 @@ section {
 
 .about {
   min-height: 738px;
-  height: 100vh;
+  margin: 0;
   background-color: #11749e;
+}
+
+.about .container {
+  padding: 0;
 }
 
 .about-heading {
@@ -290,16 +299,15 @@ section {
 
 .about-heading__title {
   padding-top: 172px;
-  padding-bottom: 108px;
+  padding-bottom: 172px;
   margin: 0;
   font-size: 37px;
   font-family: Gotham-Medium;
 }
 
 .about-heading__symbol {
+  position: absolute;
   margin: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
   font-family: Roboto;
   font-weight: 900;
   opacity: 0.3;
@@ -314,10 +322,37 @@ section {
 
 .about-cards__card-icon {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #2e85aa;
   width: 133px;
   height: 133px;
+  overflow: hidden;
   border-radius: 50%;
+  position: relative;
+}
+
+.about-cards__card-icon .icon {
+  font-size: 40px;
+}
+
+.about-cards__card-text__heading {
+  font-family: Gotham-Medium;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 20px;
+}
+
+.about-cards__card-text__p {
+  font-family: Gotham-Book;
+  font-size: 15px;
 }
 
 .links {

@@ -23,7 +23,7 @@
                 </div>
                 <div class="navigation-panel">
                     <ul class="navigation-pages">
-                        <li v-for="p in pages"><a href="{{p.link}}">{{ p.page }}</a></li>
+                        <li v-for="p in pages"><a :href="p.link">{{ p.page }}</a></li>
                     </ul>
                 </div>
                 <div class="navigation-icons">
@@ -43,72 +43,75 @@
         </div>
         <div class="scroll">
             <p class="scroll-title">Scroll Down</p>
-            <button class="scroll-btn"><i class="fas fa-chevron-down"></i></button>
+            <button v-scroll-to="{
+                el:'#about',
+                easing: 'ease-out',
+                duration: 0,
+                canselable: false
+            }" class="scroll-btn"><i class="fas fa-chevron-down"></i></button>
         </div>
         <div class="background"></div>
     </header>
-    <section class="about">
-        <div class="about-heading">
-            <h2 class="about-heading__title">We Are An Awesome Agency
-            </h2>
-            
-        </div>
-        <div class="about-cards row">
-            <div class="about-cards__card col-lg-3">
-                <div class="about-cards__card-icon">
-                    <i></i>
-                </div>
-                <div class="about-cards__card-text">
-                    <h3 class="about-cards__card-text__heading">Feature one</h3>
-                    <p class="about-cards__card-text__p">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea,
-                        facilis facere totam odit voluptas culpa quo tenetur, officiis reprehenderit magnam iure
-                        voluptatem doloremque, cum illo optio accusantium sunt. Iste, rerum?</p>
-                </div>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-heading">
+                <h2 class="about-heading__title">We Are An Awesome Agency
+                </h2>
+                <h1 class="about-heading__symbol">W</h1>
             </div>
-            <div class="about-cards__card col-lg-3">
-                <div class="about-cards__card-icon">
-                    <i></i>
+            <div class="about-cards row">
+                <div class="about-cards__card col-lg-3">
+                    <div class="about-cards__card-icon">
+                        <i class="far fa-address-book icon"></i>
+                    </div>
+                    <div class="about-cards__card-text">
+                        <h3 class="about-cards__card-text__heading">Feature one</h3>
+                        <p class="about-cards__card-text__p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempore dolorem perferendis illo, debitis rem porro qui perspiciatis cum ducimus.</p>
+                    </div>
                 </div>
-                <div class="about-cards__card-text">
-                    <h3 class="about-cards__card-text__heading">Feature two</h3>
-                    <p class="about-cards__card-text__p">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, facilis facere totam odit voluptas
-                        culpa quo tenetur, officiis reprehenderit magnam iure voluptatem doloremque, cum illo optio
-                        accusantium sunt. Iste, rerum?</p>
+                <div class="about-cards__card col-lg-3">
+                    <div class="about-cards__card-icon">
+                        <i class="fas fa-battery-three-quarters icon"></i>
+                    </div>
+                    <div class="about-cards__card-text">
+                        <h3 class="about-cards__card-text__heading">Feature two</h3>
+                        <p class="about-cards__card-text__p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, deleniti expedita quod ex recusandae quis quam quia ipsam praesentium laborum!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="about-cards__card col-lg-3">
-                <div class="about-cards__card-icon">
-                    <i></i>
+                <div class="about-cards__card col-lg-3">
+                    <div class="about-cards__card-icon">
+                        <i class="fas fa-bed icon"></i>
+                    </div>
+                    <div class="about-cards__card-text">
+                        <h3 class="about-cards__card-text__heading">Feature three</h3>
+                        <p class="about-cards__card-text__p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, corrupti? Ipsam ea aliquam consequuntur recusandae nisi ipsa, laboriosam ut sed.
+                        </p>
+                    </div>
                 </div>
-                <div class="about-cards__card-text">
-                    <h3 class="about-cards__card-text__heading">Feature three</h3>
-                    <p class="about-cards__card-text__p">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea,
-                        facilis facere totam odit voluptas culpa quo tenetur, officiis reprehenderit magnam iure
-                        voluptatem doloremque, cum illo optio accusantium sunt. Iste, rerum?</p>
-                </div>
-            </div>
-            <div class="about-cards__card col-lg-3">
-                <div class="about-cards__card-icon">
-                    <i></i>
-                </div>
-                <div class="about-cards__card-text">
-                    <h3 class="about-cards__card-text__heading">Feature Four</h3>
-                    <p class="about-cards__card-text__p">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea,
-                        facilis facere totam odit voluptas culpa quo tenetur, officiis reprehenderit magnam iure
-                        voluptatem doloremque, cum illo optio accusantium sunt. Iste, rerum?</p>
+                <div class="about-cards__card col-lg-3">
+                    <div class="about-cards__card-icon">
+                        <i class="fas fa-bus-alt icon"></i>
+                    </div>
+                    <div class="about-cards__card-text">
+                        <h3 class="about-cards__card-text__heading">Feature Four</h3>
+                        <p class="about-cards__card-text__p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et ipsum vero cum laudantium non facere explicabo voluptates in quasi?
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+
     </section>
     <footer>
         <div class="links">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
             from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 

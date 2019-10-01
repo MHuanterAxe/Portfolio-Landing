@@ -11,6 +11,11 @@ let app = new Vue({
         ]
     },
     methods:{
-
-    }
+        scrollToSection: function (target) { 
+            
+        }
+    },
+    modules: [
+        'vue-scrollto/nuxt',
+    ]
 })
